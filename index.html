@@ -77,12 +77,12 @@ margin:15px ;
 .subcard-carousel{
   color: #111;
    font-size: 20px;
- 
   font-weight: 400;
-   margin-top: 25px;
+   margin-top: 5px;
   text-align: center;
   margin-bottom: 50px;
   direction: rtl;
+  height: 60%;
   
 }
 .card-carousel-line {
@@ -147,8 +147,8 @@ margin:15px ;
 }
 
 #target-img{
-  margin-left: 56px;
-  width: 150px;
+  left:8px;
+ 
 }
 
 
@@ -158,10 +158,6 @@ margin:15px ;
 .item li {
   font-size:17px;
   text-align: right;
-}
-h3{
- text-align: center;
- margin-bottom: 20px
 }
 
 
@@ -228,6 +224,29 @@ li.indicator-dot.active-indicator{
 li.indicator-dot.active-indicator span{
     line-height: 3;
 }
+
+.item h3 {
+  text-align: center;
+margin-bottom: 15px;
+ height: 10%;
+}
+.item .img-row {
+  height: 30%;
+  width: 120px;
+  margin:auto;
+  position: relative;
+}
+
+.item .img-row img{
+  
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
 </style>
                     </head>
                     <body>
@@ -235,6 +254,7 @@ li.indicator-dot.active-indicator span{
                          
                         <div  align="center"><img  id="sca-logo" src="sca-logo.svg"></div>
                          <h2 align="center"> الإطار العام لخطة تنفيذ المشروع الوطني لتوعية المستثمرين والشمول المالي في الأسواق المالية</h2>
+                         <h3 align="center">من خلال الأهداف السبعة التالية:</h3>
                          <div style=" position: relative; "> <ol class="carousel-indicators"></ol></div>
                         
                        
@@ -335,13 +355,13 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                         
                       if (i == 0)
                         {itemObj+=('<div class="item"><h3>الهدف</h3>'+
-                        '<img src="imgs/target'+(g+1)+'.png" id="target-img">'+
+                        '<div class="img-row"><img src="imgs/target'+(g+1)+'.png" id="target-img"></div>'+
                        '<div class="subcard-carousel">'+group[g].Goals +'</div></div>');}
                       else if (i == 1)
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>الجمهور المستهدف</h3>'+
-                        '<img src="imgs/audience'+(g+1)+'.png" width="140px" style="position:relative; top:15px">'+
+                        '<div class="img-row"><img src="imgs/audience'+(g+1)+'.png" width="140px" ></div>'+
                        '<div class="subcard-carousel"><ol>'+
                        listitems(g)
                      +'</ol></div></div>');}
@@ -349,7 +369,7 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>وسائل وفنون الاتصال المستخدمة</h3>'+
-                        '<img src="imgs/speaker'+(g+1)+'.png" width="110px">'+
+                        '<div class="img-row"><img src="imgs/speaker'+(g+1)+'.png" width="110px"></div>'+
                        '<div class="subcard-carousel"><ol>'+
                        listMedia(g)
                      +'</ol></div></div>'); }
@@ -358,7 +378,7 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>النتائج المتوقعة</h3>'+
-                        '<img src="imgs/thumbsup'+(g+1)+'.png" width="100px">'+
+                        '<div class="img-row"><img src="imgs/thumbsup'+(g+1)+'.png" width="100px"></div>'+
                        '<div class="subcard-carousel">'+
                        group[g].Goals
                      +'</div></div>'); }
