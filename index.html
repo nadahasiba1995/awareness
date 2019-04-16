@@ -267,9 +267,9 @@ margin-top: 5px;
                       <script src="https://afernandezgarcia.com/codepen/carousel/js/bootstrap.js"></script>
                   <script>
                   
-                  $(document).ready(function() { 
+$(document).ready(function() { 
 
-                    var group= [{
+var group= [{
 Goals: "توعية جمهور المستثمرين بأساسيات وقواعد الاستثمار في الأوراق المالية",
 Audience: [
 " جمهور المستثمرين بشكل عام",
@@ -314,8 +314,6 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
  Audience: ["ممثلي الشركات المدرجة","ممثلي شركات الوساطة","ممثلي شركات الخدمات المالية","جمهور المستثمرين بشكل عام"],
  Media:["أفلام إنفوجرافيكس graphics – info","رسائل نصية SMS","شبكات تواصل اجتماعي","محاضرات توعية","فلايرز، مطويات brochures، بانر Banner"],
  Results: "التيسير على المتعاملين في تلقي الخدمات بما يسهم في تقديم صورة إيجابية عن الهيئة باعتبار أن خدماتها متاحة لجميع المتعاملين على مدار الساعة في إطار رؤية الحكومة الذكية"},
- 
-
 ];         
                     
   
@@ -356,13 +354,13 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                         
                       if (i == 0)
                         {itemObj+=('<div class="item"><h3>الهدف</h3>'+
-                        '<div class="img-row"><img src="imgs/target'+(g+1)+'.png" id="target-img"></div>'+
+                        '<div class="img-row"><img src="imgs/target'+(g+1)+'.png" id="target-img" width="100%"></div>'+
                        '<div class="subcard-carousel">'+group[g].Goals +'</div></div>');}
                       else if (i == 1)
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>الجمهور المستهدف</h3>'+
-                        '<div class="img-row"><img src="imgs/audience'+(g+1)+'.png" width="140px" ></div>'+
+                        '<div class="img-row"><img src="imgs/audience'+(g+1)+'.png" width="140px" width="100%"></div>'+
                        '<div class="subcard-carousel"><ol>'+
                        listitems(g)
                      +'</ol></div></div>');}
@@ -370,7 +368,7 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>وسائل وفنون الاتصال المستخدمة</h3>'+
-                        '<div class="img-row"><img src="imgs/speaker'+(g+1)+'.png" width="110px"></div>'+
+                        '<div class="img-row"><img src="imgs/speaker'+(g+1)+'.png" width="100%"></div>'+
                        '<div class="subcard-carousel"><ol>'+
                        listMedia(g)
                      +'</ol></div></div>'); }
@@ -379,7 +377,7 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>النتائج المتوقعة</h3>'+
-                        '<div class="img-row"><img src="imgs/thumbsup'+(g+1)+'.png" width="100px"></div>'+
+                        '<div class="img-row"><img src="imgs/thumbsup'+(g+1)+'.png" width="100%"></div>'+
                        '<div class="subcard-carousel">'+
                        group[g].Goals
                      +'</div></div>'); }
@@ -425,26 +423,6 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
 
            });       
                   
-// //Enable swiping...
-// $(document).on("click", ".card-carousel", function(e){
-
-// var cID= $(this).attr("data-carousel");
-// console.log(cID);
- 
-// $("[data-carousel='"+cID+"'] .carousel-inner").swipe( {
-//   //Generic swipe handler for all directions
-//   swipeLeft:function(event, direction, distance, duration, fingerCount) {
-//     $("[data-carousel='"+cID+"'] .carousel-inner").parent().carousel('next'); 
-//   },
-//   swipeRight: function() {
-//     $("[data-carousel='"+cID+"'] .carousel-inner").parent().carousel('prev'); 
-//   },
-//   //Default is 75px, set to 0 for demo so any distance triggers swipe
-//   threshold:0
-// });
-
-
-// });
 
 
  
