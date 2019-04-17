@@ -84,6 +84,7 @@ margin:15px ;
   direction: rtl;
   height: 60%;
   
+  
 }
 .card-carousel-line {
   border: 2px solid #62d9d3; 
@@ -147,7 +148,7 @@ margin:15px ;
 }
 
 #target-img{
-  left:8px;
+  margin-left:20px;
  
 }
 
@@ -226,27 +227,30 @@ li.indicator-dot.active-indicator span{
 }
 
 .item h3 {
-text-align: center;
-margin-bottom: 15px;
-margin-top: 5px;
- height: 10%;
+  text-align: center;
+    padding-bottom: 6px;
+    margin-top: 5px;
+    height: 13%;
+   
+    margin: 0;
 }
 .item .img-row {
-  height: 30%;
-  min-height: 100px;
-  width: 120px;
-  margin:auto;
-  position: relative;
+    height: 27%;
+    min-height: 100px;
+    
 }
 
 .item .img-row img{
-  
-  height: auto;
+ 
   max-width: 100%;
   max-height: 100%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  width:120px;
+
+}
+
+#audience{
+  width: 140px !important;
+  padding-top: 5px;
 
 }
 </style>
@@ -269,7 +273,7 @@ margin-top: 5px;
                   <script>
                   
 $(document).ready(function() { 
-  $(window).resize();
+  
 
 var group= [{
 Goals: "توعية جمهور المستثمرين بأساسيات وقواعد الاستثمار في الأوراق المالية",
@@ -356,13 +360,13 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                         
                       if (i == 0)
                         {itemObj+=('<div class="item"><h3>الهدف</h3>'+
-                        '<div class="img-row"><img src="imgs/target'+(g+1)+'.png" id="target-img" width="100%"></div>'+
+                        '<div align="center" class="img-row"><img src="imgs/target'+(g+1)+'.png" id="target-img" width="100%"></div>'+
                        '<div class="subcard-carousel">'+group[g].Goals +'</div></div>');}
                       else if (i == 1)
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>الجمهور المستهدف</h3>'+
-                        '<div class="img-row"><img src="imgs/audience'+(g+1)+'.png"  width="100%"></div>'+
+                        '<div align="center" class="img-row" ><img id="audience" src="imgs/audience'+(g+1)+'.png"  width="100%"></div>'+
                        '<div class="subcard-carousel"><ol>'+
                        listitems(g)
                      +'</ol></div></div>');}
@@ -370,7 +374,7 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>وسائل وفنون الاتصال المستخدمة</h3>'+
-                        '<div class="img-row"><img src="imgs/speaker'+(g+1)+'.png" width="100%"></div>'+
+                        '<div align="center" class="img-row"><img src="imgs/speaker'+(g+1)+'.png" width="100%"></div>'+
                        '<div class="subcard-carousel"><ol>'+
                        listMedia(g)
                      +'</ol></div></div>'); }
@@ -379,7 +383,7 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
                       {
                         itemObj+=('<div class="item">'+
                           '<h3>النتائج المتوقعة</h3>'+
-                        '<div class="img-row"><img src="imgs/thumbsup'+(g+1)+'.png" width="100%"></div>'+
+                        '<div align="center" class="img-row"><img src="imgs/thumbsup'+(g+1)+'.png" width="100%"></div>'+
                        '<div class="subcard-carousel">'+
                        group[g].Goals
                      +'</div></div>'); }
@@ -426,7 +430,7 @@ Audience: ["أعضاء مجالس إدارات الشركات المدرجة","�
            });       
                   
 
-
+           $("img").hide().show(0);
  
 });
                   </script>
